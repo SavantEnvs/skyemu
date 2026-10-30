@@ -1,0 +1,9 @@
+project: savantenvs/skyemu
+target: fuzz_cheat
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_cheat/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_cheat
+    libfuzzer: true
+    timeout: 30
