@@ -1,0 +1,9 @@
+project: savantenvs/skyemu
+target: fuzz_gba
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_gba/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_gba
+    libfuzzer: true
+    timeout: 30
